@@ -1,0 +1,16 @@
+<div class="col-md-6 col-md-offset-3 main">
+  <h2> Welcome {{ name | titlecase }} </h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="findNearby()"> Nearby Places </button>
+    </div>
+    <div class="col-md-8">
+      <input type="text" class="form-control" placeholder="group name" #groupName>
+      <button class="btn btn-primary" (click)="createGroup(groupName)"> Add New Group </button>
+      <hr>
+      <input type="text" class="form-control" placeholder="group name" #joinGroupName>
+      <button class="btn btn-primary" (click)="joinGroup(joinGroupName)"> Join Group </button>
+    </div>
+  </div>
+</div>

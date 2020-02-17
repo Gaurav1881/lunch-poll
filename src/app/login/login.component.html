@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="login col-md-6 col-md-offset-3">
+    <h2>Welcome To Lunch Polls!</h2>
+    <h3>Login</h3>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <input type="text" class="form-control" placeholder="username" formControlName="username">
+      <input type="password" class="form-control" placeholder="password" formControlName="password">
+      <button class="btn btn-primary"> Login </button>
+    </form>
+
+    <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+      <input type="text" class="form-control" placeholder="name" formControlName="name">
+      <input type="text" class="form-control" placeholder="username" formControlName="username">
+      <input type="password" class="form-control" placeholder="password" formControlName="password">
+      <button class="btn btn-primary"> Sign Up </button>
+    </form>
+  </div>
+</div>

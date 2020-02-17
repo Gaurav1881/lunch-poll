@@ -1,0 +1,23 @@
+<div class="col-md-6 col-md-offset-3 query">
+  <input type="text" class="form-control" placeholder="location" [(ngModel)]="location">
+  <br>
+  <button class="btn btn-primary" (click)='onQuery()'> Search Nearby </button>
+  <hr>
+  <ul class="list-group">
+    <li *ngIf="nearbyPlaces" class="list-group-item">
+      <div class="row">
+        <div class="col-md-8">Restaraunt</div>
+        <div class="col-md-3"> Rating </div>
+      </div>
+    </li>
+    <li *ngFor="let place of nearbyPlaces" class="list-group-item">
+      <div class="row">
+        <div class="col-md-8">{{place.name}}</div>
+        <div class="col-md-3">{{place.rating}}</div>
+        <div class="col-md-1">
+          <button class="btn btn-submit" (click)="onClickItem(place)"> > </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
